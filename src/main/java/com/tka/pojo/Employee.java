@@ -1,13 +1,20 @@
 package com.tka.pojo;
 
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = "empId")})
 public class Employee {
 	
 	@Id
@@ -16,9 +23,11 @@ public class Employee {
 	private Integer empId;
 	@Column(unique = false , nullable = false , length = 10)
 	private String empName;
-	@OneToOne
-	private Account account ;
-	
+
+	@OneToMany(cascade = CascadeType.ALL) 
+	@JoinColumn(name = "empId" )
+	private Set<Account> accounts ;
+
 	public Employee() {
 		super();
 		
@@ -40,12 +49,11 @@ public class Employee {
 		this.empName = empName;
 	}
 
-	public Account getAccount() {
-		return account;
+	public Set<Account> getAccounts() {
+		return accounts;
 	}
 
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccounts(Set<Account> accounts) {
+		this.accounts = accounts;
 	}
-
 }

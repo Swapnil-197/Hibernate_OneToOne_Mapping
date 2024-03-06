@@ -1,0 +1,10 @@
+2024-03-06 17:00:12.321  INFO DESKTOP-V8NHJKO	--- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 17:00:12.384  INFO DESKTOP-V8NHJKO	--- [           main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-03-06 17:00:12.546  WARN DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-03-06 17:00:12.551  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2024-03-06 17:00:12.552  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/hibernate_04]
+2024-03-06 17:00:12.552  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001001: Connection properties: {password=****, user=root}
+2024-03-06 17:00:12.553  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001003: Autocommit mode: false
+2024-03-06 17:00:12.555  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.pooling                          : HHH10001115: Connection pool size: 20 (min=1)
+2024-03-06 17:00:13.949  INFO DESKTOP-V8NHJKO	--- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 17:00:13.968  INFO DESKTOP-V8NHJKO	--- [           main] o.h.o.c.access                           : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f213a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.

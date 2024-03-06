@@ -2,12 +2,13 @@ package com.tka.pojo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = "accId")})
 public class Account {
 	
 	@Id
@@ -17,7 +18,7 @@ public class Account {
 	@Column(unique = false , length = 100 , nullable = false)
 	private String accNo;
 
-	@OneToOne(mappedBy = "account")
+	@ManyToOne
 	private Employee employee;
 
 	public Account() {
@@ -47,5 +48,5 @@ public class Account {
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
-	
+
 }

@@ -26,7 +26,7 @@ public class HibernateUtil {
 		Properties settings = new Properties();
 		
 		settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-		settings.put(Environment.URL, "jdbc:mysql://localhost:3306/hibernate_03");
+		settings.put(Environment.URL, "jdbc:mysql://localhost:3306/hibernate_04");
 		settings.put(Environment.USER, "root");
 		settings.put(Environment.PASS, "root");
 		settings.put(Environment.SHOW_SQL, "true");
